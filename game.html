@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puzzle Garden 🌺</title>
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+
+  <div class="landing" id="landing">
+    <h1 class="logo">🌺 Puzzle Garden 🌸</h1>
+    <button onclick="startGame()" class="play-btn">Enter Garden</button>
+  </div>
+
+  <div class="arcade hidden" id="arcade">
+    <header>
+      <h2>🌼 Welcome, Luna 👑</h2>
+      <button onclick="toggleMusic()">🔊 Music</button>
+    </header>
+
+    <div class="game-area">
+      <h3>Arrange the Puzzle Pieces 🌸</h3>
+      <div class="puzzle-container" id="puzzle-container"></div>
+      <p id="status-msg"></p>
+    </div>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="arcade-music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
