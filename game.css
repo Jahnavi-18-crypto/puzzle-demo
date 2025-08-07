@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(to right, #ffe3f1, #cce6ff);
+  overflow-x: hidden;
+}
+
+.landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: floatIn 2s ease;
+  text-align: center;
+}
+
+.logo {
+  font-size: 3rem;
+  color: #ff66c4;
+  text-shadow: 2px 2px white;
+}
+
+.play-btn {
+  background-color: #ff66c4;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 2rem;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 15px pink;
+  transition: 0.3s;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+  background-color: #ff2ebc;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff0f7;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.game-area {
+  padding: 2rem;
+  text-align: center;
+}
+
+.puzzle-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.puzzle-piece {
+  width: 100px;
+  height: 100px;
+  background-color: #ffe6f2;
+  border: 2px solid #ff66c4;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  user-select: none;
+}
+
+.puzzle-piece:hover {
+  transform: scale(1.1);
+  background-color: #ffd1ea;
+}
+
+#status-msg {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #4a004a;
+  font-weight: bold;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
